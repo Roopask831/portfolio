@@ -1,0 +1,19 @@
+.footer {
+  background: var(--charcoal);
+  color: white;
+  padding: 3rem 5%;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer strong {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer__sub {
+  margin-top: 6px;
+}

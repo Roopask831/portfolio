@@ -1,0 +1,135 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.modal {
+  background: white;
+  border-radius: 24px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.25);
+}
+
+.modal__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  color: var(--charcoal);
+}
+
+.modal__close:hover {
+  background: var(--sand);
+}
+
+.modal__header {
+  padding: 2.5rem 2.5rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.modal__thumb {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.modal__title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  color: var(--charcoal);
+  margin-bottom: 6px;
+}
+
+.modal__body {
+  padding: 2rem 2.5rem;
+}
+
+.modal__section-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.modal__text {
+  font-size: 0.9rem;
+  color: var(--mid);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.modal__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.modal__tag {
+  background: var(--sage-light);
+  color: var(--sage);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.modal__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modal__features li {
+  font-size: 0.88rem;
+  color: var(--mid);
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.55;
+}
+
+.modal__features li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--sage);
+  font-weight: 500;
+}
+
+.modal__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  .modal__header,
+  .modal__body {
+    padding: 1.5rem;
+  }
+}

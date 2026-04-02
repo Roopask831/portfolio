@@ -1,0 +1,39 @@
+.contact { background: var(--warm-white); }
+
+.contact__grid {
+  display: grid; grid-template-columns: 1fr 1.4fr;
+  gap: 5rem; align-items: flex-start; margin-top: 3rem;
+}
+
+.contact__info {
+  background: var(--charcoal); border-radius: var(--radius);
+  padding: 2.5rem; color: white;
+}
+.contact__info-heading { font-family: 'Fraunces', serif; font-size: 1.5rem; color: white; margin-bottom: 0.5rem; }
+.contact__info-body { font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 2rem; font-weight: 300; }
+.contact__links { display: flex; flex-direction: column; gap: 1rem; }
+.contact__link { display: flex; align-items: center; gap: 12px; text-decoration: none; color: rgba(255,255,255,0.75); font-size: 0.9rem; transition: color 0.2s; }
+.contact__link:hover { color: white; }
+.contact__link-icon { width: 38px; height: 38px; border-radius: 10px; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: white; }
+
+.contact__form { display: flex; flex-direction: column; gap: 1.25rem; }
+.contact__field { display: flex; flex-direction: column; gap: 6px; }
+.contact__label { font-size: 0.82rem; font-weight: 500; color: var(--charcoal); }
+.contact__input, .contact__textarea {
+  padding: 13px 16px; border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border); font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem; color: var(--charcoal); background: white;
+  transition: border-color 0.2s, box-shadow 0.2s; outline: none;
+}
+.contact__input:focus, .contact__textarea:focus { border-color: var(--sage); box-shadow: 0 0 0 3px rgba(74,124,89,0.1); }
+.contact__textarea { min-height: 130px; resize: none; }
+.contact__error { font-size: 0.78rem; color: #e53e3e; }
+.contact__success {
+  background: var(--sage-light); border: 1.5px solid var(--sage-mid); color: var(--sage);
+  padding: 1.2rem 1.5rem; border-radius: var(--radius-sm);
+  font-size: 0.9rem; font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .contact__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}

@@ -1,18 +1,22 @@
 import { useEffect } from "react";
 
-export default function useFadeIn() {
+export function useFadeIn() {
   useEffect(() => {
-    const els = document.querySelectorAll(".fade-in");
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add("visible");
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
+    const elements = document.querySelectorAll(".fade-in");
 
-    els.forEach(el => obs.observe(el));
-    return () => obs.disconnect();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 }
