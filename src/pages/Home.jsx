@@ -83,13 +83,13 @@ function HeroSection({ scrollTo }) {
               <span className="hero__badge-icon">
                 <CircleDot size={14} />
               </span>
-              GIS + Flood Mapping
+              MS CS · GPA 3.7
             </div>
             <div className="hero__badge hero__badge--br">
               <span className="hero__badge-icon">
                 <CircleDot size={14} />
               </span>
-              LLaMA 3 &middot; Groq API
+             2+ Years Experience
             </div>
           </div>
         </div>

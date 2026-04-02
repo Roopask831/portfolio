@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     title: "Flash Flood Vulnerability Mapping",
-    thumb: "linear-gradient(135deg, #1a4a6b 0%, #2d7d9a 50%, #74b9d0 100%)",
+    thumb: `${process.env.PUBLIC_URL}/images/flashflood.png`,
     short:
       "Real-time flood forecasting system using terrain analysis and live weather APIs to generate 48-hour prediction maps.",
     tags: ["Python", "Leaflet.js", "NASA API", "NOAA", "GIS"],
@@ -25,7 +25,7 @@ export const projects = [
   {
     id: 2,
     title: "Expense Tracker",
-    thumb: "linear-gradient(135deg, #1a3a5c 0%, #2563a8 50%, #4f9cf0 100%)",
+    thumb: `${process.env.PUBLIC_URL}/images/expense-tracker.png`,
     short:
       "Full-stack personal finance app with Firebase auth, real-time charts, budget alerts, and PWA support.",
     tags: ["Firebase", "Chart.js", "JavaScript", "PWA", "Excel Export"],
@@ -49,7 +49,7 @@ export const projects = [
   {
     id: 3,
     title: "Resume Analysis",
-    thumb: "linear-gradient(135deg, #2d1b4e 0%, #5b3b8c 50%, #9b6de0 100%)",
+    thumb: `${process.env.PUBLIC_URL}/images/resume-analysis.png`,
     short:
       "AI-powered resume optimizer using LLaMA 3 for ATS scoring, keyword matching, and personalized recommendations.",
     tags: ["LLaMA 3", "Groq API", "React", "AI", "NLP"],
